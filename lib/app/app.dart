@@ -41,6 +41,7 @@ import 'package:flutterquiz/features/statistic/cubits/statisticsCubit.dart';
 import 'package:flutterquiz/features/statistic/statisticRepository.dart';
 import 'package:flutterquiz/features/systemConfig/cubits/systemConfigCubit.dart';
 import 'package:flutterquiz/features/systemConfig/system_config_repository.dart';
+import 'package:flutterquiz/firebase_options.dart';
 import 'package:flutterquiz/ui/styles/theme/appTheme.dart';
 import 'package:flutterquiz/ui/styles/theme/themeCubit.dart';
 import 'package:flutterquiz/utils/constants/constants.dart';
@@ -56,7 +57,9 @@ Future<Widget> initializeApp() async {
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
     );
 
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
     FirebaseFirestore.instance.settings =
         const Settings(persistenceEnabled: false);
 

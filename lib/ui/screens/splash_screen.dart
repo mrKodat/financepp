@@ -158,35 +158,35 @@ class _SplashScreenState extends State<SplashScreen>
             child: Stack(
               children: [
                 /// App Logo
-                Align(
-                  child: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 100),
-                    child: AnimatedBuilder(
-                      animation: _logoAnimationController,
-                      builder: (_, __) => Transform.scale(
-                        scale: _logoScaleUpAnimation.value -
-                            _logoScaleDownAnimation.value,
-                        child: QImage(
-                          imageUrl: _appLogoPath,
-                          width: 200,
-                          height: 200,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                // Align(
+                //   child: AnimatedSwitcher(
+                //     duration: const Duration(milliseconds: 100),
+                //     child: AnimatedBuilder(
+                //       animation: _logoAnimationController,
+                //       builder: (_, __) => Transform.scale(
+                //         scale: _logoScaleUpAnimation.value -
+                //             _logoScaleDownAnimation.value,
+                //         child: QImage(
+                //           imageUrl: _appLogoPath,
+                //           width: 200,
+                //           height: 200,
+                //           fit: BoxFit.contain,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
 
                 /// Organization Logo
-                if (showCompanyLogo) ...[
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 22),
-                      child: QImage(imageUrl: _orgLogoPath),
-                    ),
-                  ),
-                ],
+                // if (showCompanyLogo) ...[
+                //   Align(
+                //     alignment: Alignment.bottomCenter,
+                //     child: Padding(
+                //       padding: const EdgeInsets.only(bottom: 22),
+                //       child: QImage(imageUrl: _orgLogoPath),
+                //     ),
+                //   ),
+                // ],
               ],
             ),
           ),

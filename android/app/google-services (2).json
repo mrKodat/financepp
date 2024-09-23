@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "342239774164",
+    "project_id": "financepp-4f4bc",
+    "storage_bucket": "financepp-4f4bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342239774164:android:b08da25d01188e004ac241",
+        "android_client_info": {
+          "package_name": "com.financepp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsOx-9hngEwQannDfWU_tVbAtKqtQquJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

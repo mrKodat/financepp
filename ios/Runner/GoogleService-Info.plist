@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>322915959213-dh9pngcbov233e8hok2b4i142nem7vs4.apps.googleusercontent.com</string>
+	<string>342239774164-43068eovoh1eb2aop6lvtub3hu3hkgeq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.322915959213-dh9pngcbov233e8hok2b4i142nem7vs4</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>322915959213-0ohq3pp1m8ihaaje0t0mt4knoadeiema.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.342239774164-43068eovoh1eb2aop6lvtub3hu3hkgeq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyChcZscTQiWbqGeHPrb52Ffmzw9En9iOlY</string>
+	<string>AIzaSyDPuIJKxRSDXd8KsKPag2tpQtDqb9SBdh0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>322915959213</string>
+	<string>342239774164</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.wrteam.flutterquiz</string>
+	<string>com.financepp</string>
 	<key>PROJECT_ID</key>
-	<string>quiz-flutter-new</string>
+	<string>financepp-4f4bc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>quiz-flutter-new.appspot.com</string>
+	<string>financepp-4f4bc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:322915959213:ios:c19bac87f4cd365642e124</string>
-	<key>DATABASE_URL</key>
-	<string>https://quiz-flutter-new-default-rtdb.firebaseio.com</string>
+	<string>1:342239774164:ios:1c8ee5b2e25c8a2b4ac241</string>
 </dict>
 </plist>
