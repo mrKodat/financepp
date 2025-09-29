@@ -1,14 +1,6 @@
-# Bitcoin Cüzdan Dosyası Analizi
 
-Bu belge, `wallet.test.dat` dosyasının yapısını ve içeriğini analiz etmektedir.
 
-## Genel Bakış
-
-Bu dosya, Bitcoin Core cüzdanının "descriptor wallet" formatında bir SQLite veritabanıdır. İçinde farklı adres türleri, anahtarlar ve blok zinciri durum bilgileri bulunmaktadır.
-
-## Veritabanı Yapısı
-
-### Ana Tablo (main)
+### Tablo (main)
 
 | Alan Adı | Veri Tipi | Açıklama |
 |----------|-----------|----------|
@@ -41,8 +33,6 @@ Bu dosya, Bitcoin Core cüzdanının "descriptor wallet" formatında bir SQLite 
 
 ## Cüzdan Önbellekleri (walletdescriptorcache)
 
-Cüzdan önbellekleri, adres türetme işlemlerini hızlandırmak için kullanılır. Her adres türü için ayrı önbellek tutulur.
-
 | Önbellek Tipi | Değer | İlişkili Adres Türü |
 |---------------|-------|---------------------|
 | walletdescriptorcache | 00000000004a04169aad22000000000cf9f2b6258cd72565... | Taproot (tr) |
@@ -52,8 +42,6 @@ Cüzdan önbellekleri, adres türetme işlemlerini hızlandırmak için kullanı
 | walletdescriptorcacheE | 00000000004a04169aad2200000001a9f2a1cfb508135a... | Taproot İç Adresler |
 
 ## Şifreleme Anahtarları (walletdescriptorckey)
-
-Şifreleme anahtarları, cüzdanın güvenliğini sağlamak için kullanılır.
 
 | Anahtar Tipi | Değer | İlişkili Adres Türü |
 |--------------|-------|---------------------|
@@ -65,8 +53,6 @@ Cüzdan önbellekleri, adres türetme işlemlerini hızlandırmak için kullanı
 
 ## Yerel Hash Önbellekleri (walletdescriptorlhcache)
 
-Yerel hash önbellekleri, adres türetme işlemlerinde kullanılan hash değerlerini saklar.
-
 | Önbellek Tipi | Değer | İlişkili Adres Türü |
 |---------------|-------|---------------------|
 | walletdescriptorlhcache | 00000000004a03de2f239e80000000538a1037193d3b98... | Taproot (tr) |
@@ -75,7 +61,7 @@ Yerel hash önbellekleri, adres türetme işlemlerinde kullanılan hash değerle
 | walletdescriptorlhcache | 00000000004a03e3d067988000000... | Legacy (pkh) |
 | walletdescriptorlhcacheE | 00000000004a03de2f239e80000000538a1037... | Taproot İç Adresler |
 
-## Blok Zinciri Durum Bilgileri
+## Blok Zinciri
 
 Cüzdan dosyası, blok zincirinin durumunu takip etmek için çeşitli bilgiler içerir.
 
@@ -90,27 +76,7 @@ Cüzdan dosyası, blok zincirinin durumunu takip etmek için çeşitli bilgiler 
 
 ## Extended Public Key (xpub)
 
-Tüm adres türleri için kullanılan ortak extended public key:
-
 ```
 xpub661MyMwAqRbcGqYqNCVeGV3hq9tE7uEz1mZtigrpvynka5bMpcaiXXmqrkSrnrm1dtnb4rLyKdcQxzipDPE4UVD8F6Hh7LmqC3nvSiupBET
 ```
 
-## Adres Türleri Açıklamaları
-
-1. **Taproot (tr)**: Bitcoin'in en yeni ve gelişmiş adres formatı. Schnorr imzaları kullanır ve daha fazla gizlilik ve ölçeklenebilirlik sağlar.
-
-2. **SegWit (wpkh)**: Segregated Witness adresleri. İşlem boyutlarını küçültür ve ücretleri azaltır.
-
-3. **Nested SegWit (sh(wpkh))**: Eski cüzdanlarla uyumluluk için SegWit adreslerini script hash içine yerleştirir.
-
-4. **Legacy (pkh)**: Orijinal Bitcoin adresi formatı. P2PKH (Pay to Public Key Hash) olarak da bilinir.
-
-## Türetme Yolları Açıklamaları
-
-- **86h/0h/0h/0/\***: Taproot adresleri için BIP86 türetme yolu
-- **84h/0h/0h/0/\***: SegWit adresleri için BIP84 türetme yolu
-- **49h/0h/0h/0/\***: Nested SegWit adresleri için BIP49 türetme yolu
-- **44h/0h/0h/0/\***: Legacy adresleri için BIP44 türetme yolu
-
-Burada "h" işareti, sertleştirilmiş türetmeyi (hardened derivation) belirtir.
